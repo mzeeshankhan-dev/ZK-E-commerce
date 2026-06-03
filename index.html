@@ -26,7 +26,144 @@
             <div class="logo">
                 <!-- menu button -->
                 <div class="menu-btn">
-                    <i class="ri-menu-line"></i>
+                    <i id="menu-btn" class="ri-menu-line"></i>
+                </div>
+                <!-- sidebar ctr -->
+                <div class="sidebar" id="sidebar">
+                    <!-- sidebar header -->
+                    <div class="sidebar-header">
+                        <div class="sidebar-logo">
+                            <img src="./assets/images/web-logo.png" alt="logo img">
+                        </div>
+                        <div class="close-icon">
+                            <i id="close-btn" class="ri-close-large-fill"></i>
+                        </div>
+                    </div>
+                    <!-- sidebar contant -->
+                    <div class="contant">
+                        <h2>Categories</h2>
+                        <ul class="items">
+                            <li><span>🚗</span><a href="#">Automobiles</a></li>
+                            <li><span>📱</span><a href="#">Home appliance</a></li>
+                            <li><span>🛠️</span><a href="#">Tools, equipments</a></li>
+                            <li><span>📖</span><a href="#">Books & magazines</a></li>
+                            <li><span>💻</span><a href="#">Electronic gadgets</a></li>
+                            <li><span>👕</span><a href="#">Clothing and wear</a></li>
+                            <li><span>⚽</span><a href="#">Sports and outdoor</a></li>
+                        </ul>
+                    </div>
+                    <!-- filter -->
+                    <div class="filter">
+
+                        <div class="sidebar-filter">
+                            <div class="filter-header">
+                                <h2><i class="ri-filter-2-fill"></i>Filter</h2>
+                                <button id="clear-all" class="clear-btn">Clear All</button>
+                            </div>
+
+                            <hr class="divider">
+
+                            <div class="filter-section">
+                                <h4>Price Range</h4>
+                                <div class="price-slider-container">
+                                    <input type="range" id="price-slider" min="0" max="1000" value="500" class="slider">
+                                    <div class="price-values">
+                                        <span>$0</span>
+                                        <span id="price-output">Max: $500</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr class="divider">
+
+                            <div class="filter-section">
+                                <h4>Colors</h4>
+                                <div class="color-options">
+                                    <label class="color-checkbox" style="--color-bg: #1a1a1a;">
+                                        <input type="checkbox" name="color" value="black">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="color-checkbox" style="--color-bg: #ff4757;">
+                                        <input type="checkbox" name="color" value="red">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="color-checkbox" style="--color-bg: #2ed573;">
+                                        <input type="checkbox" name="color" value="green">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="color-checkbox" style="--color-bg: #1e90ff;">
+                                        <input type="checkbox" name="color" value="blue">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="color-checkbox" style="--color-bg: #ffa502;">
+                                        <input type="checkbox" name="color" value="orange">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <hr class="divider">
+
+                            <div class="filter-section">
+                                <h4>Rating</h4>
+                                <div class="rating-options">
+                                    <label class="rating-radio">
+                                        <input type="radio" name="rating" value="4">
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <span class="rating-text">& Up</span>
+                                        </span>
+                                    </label>
+                                    <label class="rating-radio">
+                                        <input type="radio" name="rating" value="3">
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-line"></i>
+                                            <span class="rating-text">& Up</span>
+                                        </span>
+                                    </label>
+                                    <label class="rating-radio">
+                                        <input type="radio" name="rating" value="2">
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-line"></i>
+                                            <i class="ri-star-line"></i>
+                                            <i class="ri-star-line"></i>
+                                            <span class="rating-text">& Up</span>
+                                        </span>
+                                    </label>
+                                    <label class="rating-radio">
+                                        <input type="radio" name="rating" value="2">
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-line"></i>
+                                            <i class="ri-star-line"></i>
+                                            <i class="ri-star-line"></i>
+                                            <i class="ri-star-line"></i>
+                                            <span class="rating-text">& Up</span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <button id="apply-filters" class="apply-btn">Apply Filters</button>
+                        </div>
+
+
+                    </div>
+
                 </div>
                 <!-- logo -->
                 <div class="logo-ctr">
@@ -52,9 +189,29 @@
             </div>
 
             <div class="nav-right">
-                <div class="div">
-                    <span class="sub-text">Hello, Sign in</span>
-                    <div><strong>Account & Lists</strong><i class="ri-arrow-down-s-line"></i></div>
+
+                <div class="login-ctr">
+                    <div class="div">
+                        <span class="sub-text">Hello, Sign in</span>
+                        <div><strong>Account & Lists</strong><i class="ri-arrow-down-s-line"></i></div>
+                    </div>
+                    <!-- login dropdown  -->
+                    <div class="login-notification-card">
+                        <div class="card-header">
+                            <button class="btn login">Sign In</button>
+                            <button class="btn register">Register</button>
+                        </div>
+
+                        <ul class="login-menu">
+                            <li><span>☰</span> My Orders</li>
+                            <li><span>💬</span> Message Center</li>
+                            <li><span>◈</span> My Coins</li>
+                            <li><span>💳</span> Payment</li>
+                            <li><span>♡</span> Wish List</li>
+                            <li><span>⚙</span> Setting</li>
+                            <li><span>📁</span> DS Center</li>
+                        </ul>
+                    </div>
                 </div>
 
                 <div class="div h-ro">
@@ -78,8 +235,24 @@
             <a href="#">Gift Cards</a>
             <a href="#">Sell</a>
             <a href="#">ZK Business</a>
-            <a href="#">More<i class="ri-arrow-drop-down-fill"
-                    style="font-size: 2rem; font-weight: 600; position: relative; bottom: -0.4rem;"></i></a>
+            <div class="more-ctr">
+                <a href="#">More<i class="ri-arrow-drop-down-fill"
+                        style="font-size: 2rem; font-weight: 600; position: relative; bottom: -0.4rem;"></i>
+                </a>
+
+                <!-- mire link dropdown -->
+                <div class="more-notification-card">
+                    <ul class="more-menu">
+                        <li>Computer Accessories</li>
+                        <li>Video Games</li>
+                        <li>Boys'Fashion</li>
+                        <li>Smart Home</li>
+                        <li>Meat & Seafood</li>
+                        <li>Writing Supplies</li>
+                    </ul>
+                </div>
+
+            </div>
         </div>
     </header>
 
@@ -125,10 +298,29 @@
                     <p>Sports and outdoor</p>
                 </div>
 
-                <div class="item more">
+                <div class="item more" id="more">
                     <span>☷</span>
                     <p>More category</p>
                     <span class="arrow">›</span>
+                </div>
+
+                <div class="more-category" id="more-category">
+
+                    <div class="item">
+                        <span>💄</span>
+                        <p>Health & Beauty</p>
+                    </div>
+
+                    <div class="item">
+                        <span>🧸</span>
+                        <p>Toys & Hobbies</p>
+                    </div>
+
+                    <div class="item">
+                        <span>🛒</span>
+                        <p>Groceries & Pets</p>
+                    </div>
+
                 </div>
 
             </div>

@@ -35,6 +35,91 @@ const swiper = new Swiper(".mySwiper", {
 
 });
 
+// More category dropdown
+
+const moreB=document.getElementById("more");
+
+moreB.addEventListener("click",(e)=>{
+    let category=document.getElementById("more-category").classList.toggle("show");
+})
+
+///  Sidebar Toggle  ///
+
+const menuBtn=document.getElementById("menu-btn");
+const closeBtn=document.getElementById("close-btn");
+const sidebar=document.getElementById("sidebar");
+
+menuBtn.addEventListener("click",()=>{
+    sidebar.classList.add("active");
+});
+closeBtn.addEventListener("click",()=>{
+    sidebar.classList.remove("active");
+});
+document.addEventListener("click",(e)=>{
+    if(
+        !sidebar.contains(e.target) &&
+        !menuBtn.contains(e.target)
+    ) {
+         sidebar.classList.remove("active");
+    }
+})
+
+
+
+
+// sidebar filter
+
+
+// DOM Elements
+const priceSlider = document.getElementById('price-slider');
+const priceOutput = document.getElementById('price-output');
+const clearAllBtn = document.getElementById('clear-all');
+const applyFiltersBtn = document.getElementById('apply-filters');
+
+// 1. Update Price Label Live on Slider Move
+priceSlider.addEventListener('input', (e) => {
+    priceOutput.textContent = `Max: $${e.target.value}`;
+});
+
+// 2. Clear All Filters Logic
+clearAllBtn.addEventListener('click', () => {
+    // Reset Price Slider
+    priceSlider.value = 500;
+    priceOutput.textContent = 'Max: $500';
+
+    // Uncheck Colors
+    const colorCheckboxes = document.querySelectorAll('input[name="color"]');
+    colorCheckboxes.forEach(cb => cb.checked = false);
+
+    // Uncheck Ratings
+    const ratingRadios = document.querySelectorAll('input[name="rating"]');
+    ratingRadios.forEach(radio => radio.checked = false);
+});
+
+// 3. Apply Filters Button Click (Console Data Check)
+applyFiltersBtn.addEventListener('click', () => {
+    // Selected Price
+    const maxPrice = priceSlider.value;
+
+    // Selected Colors
+    const selectedColors = [];
+    document.querySelectorAll('input[name="color"]:checked').forEach(cb => {
+        selectedColors.push(cb.value);
+    });
+
+    // Selected Rating
+    const selectedRatingElement = document.querySelector('input[name="rating"]:checked');
+    const selectedRating = selectedRatingElement ? selectedRatingElement.value : 'None';
+
+    // Output for testing (Aap yahan apni API call lagasakte hain)
+    console.log("--- Applied Filters ---");
+    console.log("Max Price:", `$${maxPrice}`);
+    console.log("Colors:", selectedColors);
+    console.log("Min Rating:", selectedRating);
+    
+    alert(`Filters Applied!\nPrice: $${maxPrice}\nColors: ${selectedColors.join(', ') || 'None'}\nRating: ${selectedRating} Stars & Up`);
+});
+
 
 
 
