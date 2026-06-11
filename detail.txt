@@ -572,15 +572,20 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Function to generate and add product detail HTML to the page
+
 function addToProductDetailHTML() {
+
   // Initialize an empty string for the product detail HTML
   let productDetailHTML = "";
+
   // Get the product ID from the URL
   let productId = new URLSearchParams(window.location.search).get("id");
+
   let productData;
 
   // Loop through the products array to find the product with the matching ID
   products.forEach(productDetail => {
+    
     if (productDetail.id === productId) {
       // Store the product data if it matches the ID
       productData = productDetail;
@@ -744,7 +749,7 @@ function addToProductDetailHTML() {
       const productId = button.dataset.productId;
       // Get the selected quantity from the dropdown
       const quantityElement = document.querySelector(
-        `#product-quantity-select[data-product-id="${productData.id}"`
+        `#product-quantity-select[data-product-id="${productData.id}"]`
       );
       // Parse the quantity as an integer
       const selectedQuantity = parseInt(quantityElement.value);

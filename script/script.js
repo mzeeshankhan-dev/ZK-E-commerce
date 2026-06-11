@@ -117,7 +117,7 @@ applyFiltersBtn.addEventListener('click', () => {
 
 //////////   product showing in webpage   ////////
 
-import { productsItems } from "../data/products.js";
+import { productsItems } from "../data/products-item.js";
 
 document.addEventListener("DOMContentLoaded", () => {
     showingProducts();
@@ -156,21 +156,19 @@ function showingProducts() {
                                     (30% off)
                                 </span>
                             </div>
-
                         </div>
                         <div class="p-rating">
                             <span class="rating">
                                 ${rating}
                             </span>
                             <span class="available-stock">
-                                (${product.availableStock})
+                              (${product.availableStock} Review)
                             </span>
                         </div>
                     </div>
                 </a>`
     })
-document.querySelector("#product-container").innerHTML=productHTML;
-
+    document.querySelector("#product-container").innerHTML = productHTML;
 };
 
 

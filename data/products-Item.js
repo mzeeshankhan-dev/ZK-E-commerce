@@ -16,7 +16,7 @@ export const productsItems = [
     // URL of main image of the product
     mainImage: "./assets/e-commerce Products/01product/product-1.webp",
     // images URLs of this product
-    images: ["assets/01product/product-1.webp, assets/01product/product-2.webp, assets/01product/product-3.webp, assets/01product/product-4.webp, assets/01product/product-5.webp"],
+    images: ["./assets/e-commerce Products/01product/product-1.webp", "./assets/e-commerce Products/01product/product-2.webp", "./assets/e-commerce Products/01product/product-3.webp", "./assets/e-commerce Products/01product/product-4.webp", "./assets/e-commerce Products/01product/product-5.webp"],
     // Product name
     name: "Male Jacket",
     // Product price
@@ -25,10 +25,10 @@ export const productsItems = [
     oldPrice: 999,
     // Rating icons
     rating: ["ri-star-fill", "ri-star-fill", "ri-star-fill", "ri-star-fill", "ri-star-line"],
-    // Available stock count
-    availableStock: 1327,
+    // review count
+    count: 1327,
     // Product colors
-    color: ["Brown, Blue, Red, Gray, Black"],
+    color: ["Brown", "Blue", "Red", "Gray", "Black"],
     // Product sizes
     size: ["Small", "Medium", "Large"],
   },
@@ -44,11 +44,11 @@ export const productsItems = [
     // Product price
     price: 870,
     // old price
-    oldPrice:1150,
+    oldPrice: 1150,
     // Rating icons
     rating: ["ri-star-fill", "ri-star-fill", "ri-star-fill", "ri-star-fill", "ri-star-line"],
     // Available stock count
-     availableStock: 1127,
+    availableStock: 1127,
     // Product colors
     color: ["Brown, Blue, Red, Gray, Black"],
     // Product sizes
@@ -66,11 +66,11 @@ export const productsItems = [
     // Product price
     price: 870,
     // old price
-    oldPrice:1150,
+    oldPrice: 1150,
     // Rating icons
     rating: ["ri-star-fill", "ri-star-fill", "ri-star-fill", "ri-star-fill", "ri-star-line"],
     // Available stock count
-     availableStock: 1127,
+    availableStock: 1127,
     // Product colors
     color: ["Brown, Blue, Red, Gray, Black"],
     // Product sizes
@@ -88,11 +88,11 @@ export const productsItems = [
     // Product price
     price: 870,
     // old price
-    oldPrice:1150,
+    oldPrice: 1150,
     // Rating icons
     rating: ["ri-star-fill", "ri-star-fill", "ri-star-fill", "ri-star-fill", "ri-star-line"],
     // Available stock count
-     availableStock: 1127,
+    availableStock: 1127,
     // Product colors
     color: ["Brown, Blue, Red, Gray, Black"],
     // Product sizes
@@ -110,11 +110,11 @@ export const productsItems = [
     // Product price
     price: 870,
     // old price
-    oldPrice:1150,
+    oldPrice: 1150,
     // Rating icons
     rating: ["ri-star-fill", "ri-star-fill", "ri-star-fill", "ri-star-fill", "ri-star-line"],
     // Available stock count
-     availableStock: 1127,
+    availableStock: 1127,
     // Product colors
     color: ["Brown, Blue, Red, Gray, Black"],
     // Product sizes
@@ -132,11 +132,11 @@ export const productsItems = [
     // Product price
     price: 870,
     // old price
-    oldPrice:1150,
+    oldPrice: 1150,
     // Rating icons
     rating: ["ri-star-fill", "ri-star-fill", "ri-star-fill", "ri-star-fill", "ri-star-line"],
     // Available stock count
-     availableStock: 1127,
+    availableStock: 1127,
     // Product colors
     color: ["Brown, Blue, Red, Gray, Black"],
     // Product sizes
@@ -154,11 +154,11 @@ export const productsItems = [
     // Product price
     price: 870,
     // old price
-    oldPrice:1150,
+    oldPrice: 1150,
     // Rating icons
     rating: ["ri-star-fill", "ri-star-fill", "ri-star-fill", "ri-star-fill", "ri-star-line"],
     // Available stock count
-     availableStock: 1127,
+    availableStock: 1127,
     // Product colors
     color: ["Brown, Blue, Red, Gray, Black"],
     // Product sizes
@@ -176,11 +176,11 @@ export const productsItems = [
     // Product price
     price: 870,
     // old price
-    oldPrice:1150,
+    oldPrice: 1150,
     // Rating icons
     rating: ["ri-star-fill", "ri-star-fill", "ri-star-fill", "ri-star-fill", "ri-star-line"],
     // Available stock count
-     availableStock: 1127,
+    availableStock: 1127,
     // Product colors
     color: ["Brown, Blue, Red, Gray, Black"],
     // Product sizes
@@ -198,11 +198,11 @@ export const productsItems = [
     // Product price
     price: 870,
     // old price
-    oldPrice:1150,
+    oldPrice: 1150,
     // Rating icons
     rating: ["ri-star-fill", "ri-star-fill", "ri-star-fill", "ri-star-fill", "ri-star-line"],
     // Available stock count
-     availableStock: 1127,
+    availableStock: 1127,
     // Product colors
     color: ["Brown, Blue, Red, Gray, Black"],
     // Product sizes
@@ -220,11 +220,11 @@ export const productsItems = [
     // Product price
     price: 870,
     // old price
-    oldPrice:1150,
+    oldPrice: 1150,
     // Rating icons
     rating: ["ri-star-fill", "ri-star-fill", "ri-star-fill", "ri-star-fill", "ri-star-line"],
     // Available stock count
-     availableStock: 1127,
+    availableStock: 1127,
     // Product colors
     color: ["Brown, Blue, Red, Gray, Black"],
     // Product sizes
@@ -242,11 +242,11 @@ export const productsItems = [
     // Product price
     price: 870,
     // old price
-    oldPrice:1150,
+    oldPrice: 1150,
     // Rating icons
     rating: ["ri-star-fill", "ri-star-fill", "ri-star-fill", "ri-star-fill", "ri-star-line"],
     // Available stock count
-     availableStock: 1127,
+    availableStock: 1127,
     // Product colors
     color: ["Brown, Blue, Red, Gray, Black"],
     // Product sizes
@@ -264,11 +264,11 @@ export const productsItems = [
     // Product price
     price: 870,
     // old price
-    oldPrice:1150,
+    oldPrice: 1150,
     // Rating icons
     rating: ["ri-star-fill", "ri-star-fill", "ri-star-fill", "ri-star-fill", "ri-star-line"],
     // Available stock count
-     availableStock: 1127,
+    availableStock: 1127,
     // Product colors
     color: ["Brown, Blue, Red, Gray, Black"],
     // Product sizes
@@ -286,11 +286,11 @@ export const productsItems = [
     // Product price
     price: 870,
     // old price
-    oldPrice:1150,
+    oldPrice: 1150,
     // Rating icons
     rating: ["ri-star-fill", "ri-star-fill", "ri-star-fill", "ri-star-fill", "ri-star-line"],
     // Available stock count
-     availableStock: 1127,
+    availableStock: 1127,
     // Product colors
     color: ["Brown, Blue, Red, Gray, Black"],
     // Product sizes
@@ -308,11 +308,11 @@ export const productsItems = [
     // Product price
     price: 870,
     // old price
-    oldPrice:1150,
+    oldPrice: 1150,
     // Rating icons
     rating: ["ri-star-fill", "ri-star-fill", "ri-star-fill", "ri-star-fill", "ri-star-line"],
     // Available stock count
-     availableStock: 1127,
+    availableStock: 1127,
     // Product colors
     color: ["Brown, Blue, Red, Gray, Black"],
     // Product sizes
@@ -330,11 +330,11 @@ export const productsItems = [
     // Product price
     price: 870,
     // old price
-    oldPrice:1150,
+    oldPrice: 1150,
     // Rating icons
     rating: ["ri-star-fill", "ri-star-fill", "ri-star-fill", "ri-star-fill", "ri-star-line"],
     // Available stock count
-     availableStock: 1127,
+    availableStock: 1127,
     // Product colors
     color: ["Brown, Blue, Red, Gray, Black"],
     // Product sizes
@@ -352,11 +352,11 @@ export const productsItems = [
     // Product price
     price: 870,
     // old price
-    oldPrice:1150,
+    oldPrice: 1150,
     // Rating icons
     rating: ["ri-star-fill", "ri-star-fill", "ri-star-fill", "ri-star-fill", "ri-star-line"],
     // Available stock count
-     availableStock: 1127,
+    availableStock: 1127,
     // Product colors
     color: ["Brown, Blue, Red, Gray, Black"],
     // Product sizes
@@ -374,11 +374,11 @@ export const productsItems = [
     // Product price
     price: 870,
     // old price
-    oldPrice:1150,
+    oldPrice: 1150,
     // Rating icons
     rating: ["ri-star-fill", "ri-star-fill", "ri-star-fill", "ri-star-fill", "ri-star-line"],
     // Available stock count
-     availableStock: 1127,
+    availableStock: 1127,
     // Product colors
     color: ["Brown, Blue, Red, Gray, Black"],
     // Product sizes
@@ -396,11 +396,11 @@ export const productsItems = [
     // Product price
     price: 870,
     // old price
-    oldPrice:1150,
+    oldPrice: 1150,
     // Rating icons
     rating: ["ri-star-fill", "ri-star-fill", "ri-star-fill", "ri-star-fill", "ri-star-line"],
     // Available stock count
-     availableStock: 1127,
+    availableStock: 1127,
     // Product colors
     color: ["Brown, Blue, Red, Gray, Black"],
     // Product sizes
