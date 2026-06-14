@@ -20,7 +20,7 @@
 <body>
     <!-- ////////  Header Section  ////// -->
 
-        <header>
+    <header>
         <div class="navbar">
 
             <!-- header logo -->
@@ -228,11 +228,13 @@
                     <div><strong>& Orders</strong></div>
                 </div>
 
-                <div class="cart-btn div">
-                    <span class="cart-count">0</span>
-                    <i class="ri-shopping-cart-line"></i>
-                    <strong>Cart</strong>
-                </div>
+                <a href="./cart.html">
+                    <div class="cart-btn div" id="cart-btn">
+                        <span class="cart-count" id="cart-count">0</span>
+                        <i class="ri-shopping-cart-line"></i>
+                        <strong>Cart</strong>
+                    </div>
+                </a>
             </div>
         </div>
 
@@ -268,114 +270,8 @@
 
     <main class="details-main-ctr">
         <section class="product-detail-section" id="product-detail-section">
-            <div class="product-detail-container">
-                <div class="product-images-ctr">
-                    <div class="p-main-img" id="p-main-img">
-                        <img src="./assets/e-commerce Products/02product/product-1.webp" alt="product-main-img">
-                    </div>
-                    <div class="p-other-img">
-                        <img src="./assets/e-commerce Products/02product/product-1.webp" alt="image">
-                        <img src="./assets/e-commerce Products/02product/product-2.webp" alt="image">
-                        <img src="./assets/e-commerce Products/02product/product-3.webp" alt="image">
-                        <img src="./assets/e-commerce Products/02product/product-4.webp" alt="image">
-                        <img src="./assets/e-commerce Products/02product/product-5.webp" alt="image">
-                    </div>
-                </div>
-                <!-- product details -->
-                <div class="product-details">
-                    <span class="best-seller">Best Seller</span>
 
-                    <div class="p-name">
-                        <h1>Luxury Jacket</h1>
-                    </div>
-
-                    <div class="pd-rating">
-                        <span class="rating">
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-line"></i>
-                        </span>
-                        <span class="review">
-                            (123 Reviews)
-                        </span>
-                    </div>
-
-                    <div class="dp-price">
-                        <div class="dp-new-price">
-                            <h2>$999.99</h2>
-                        </div>
-                        <div class="dp-old-p">
-                            <span class="old-price">
-                                $1299.99
-                            </span>
-                            <span class="discount">
-                                (30% off)
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="product-description">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate, ex
-                        quasi dolore quaerat sunt id ratione excepturi ipsa quisquam aliquam culpa dolorum
-                        nostrum voluptas corrupti neque, natus aperiam laborum? Explicabo.
-                    </div>
-
-                    <hr style="margin: 2rem 0rem;">
-
-                    <div class="color-section">
-                        <h3>Select Color</h3>
-                        <div class="product-colors product-details-input">
-                            <input type="radio" name="color" id="black" value="black">
-                            <label for="black" class="color black">Black</label>
-
-                            <input type="radio" name="color" id="red">
-                            <label for="red" class="color red">Red</label>
-
-                            <input type="radio" name="color" id="blue">
-                            <label for="blue" class="color blue">Blue</label>
-                        </div>
-                    </div>
-
-                    <div class="size-section">
-                        <h3>Select Size</h3>
-                        <div class="product-Size product-details-input">
-                            <input type="radio" name="size" id="small" value="small">
-                            <label for="small" class="size small">Small</label>
-
-                            <input type="radio" name="size" id="meddium" value="meddium">
-                            <label for="meddium" class="size meddium">Meddium</label>
-
-                            <input type="radio" name="size" id="large" value="large">
-                            <label for="large" class="size large">Large</label>
-                        </div>
-                    </div>
-
-                    <div class="pd-add-ctr">
-                        <div class="addToCart">
-                            <div class="count">
-                                <button class="decrease" id="minus">-</button>
-                                <span class="p-quantity" id="quantity">1</span>
-                                <button class="increase" id="plus">+</button>
-                            </div>
-                            <div class="addBtn">
-                                <button class="product-Add-Btn">
-                                    <i class="ri-shopping-bag-4-line"></i> Add to Cart
-                                </button>
-                            </div>
-                        </div>
-
-                        <button class="byNow">
-                            Buy Now
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- <hr style=" margin-top: 2rem;"> -->
-
-            <!-- product-detail-page- feature -->
+            <!-- product-detail-page-feature -->
             <div class="features">
                 <div class="feature-box">
                     <h3>🚚 Free Shipping</h3>
@@ -401,18 +297,11 @@
                     </p>
                 </div>
             </div>
+
         </section>
 
+        <!-- this container used in product.js for put product images -->
         <div class="product-images" id="product-images">
-            <div class="p-main-image">
-                <img src="./assets/e-commerce Products/02product/product-1.webp" alt="">
-            </div>
-            <div class="p-other-images">
-                <img src="./assets/e-commerce Products/02product/product-2.webp" alt="">
-                <img src="./assets/e-commerce Products/02product/product-3.webp" alt="">
-                <img src="./assets/e-commerce Products/02product/product-4.webp" alt="">
-                <img src="./assets/e-commerce Products/02product/product-5.webp" alt="">
-            </div>
         </div>
 
     </main>

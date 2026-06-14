@@ -114,6 +114,8 @@ h3 {
 .product-colors {
     margin-top: 1rem;
     display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .product-details-input input {
@@ -126,7 +128,6 @@ label {
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
     cursor: pointer;
-    margin-right: 1rem;
 
 }
 
@@ -136,13 +137,15 @@ input[type="radio"]:checked+label {
     border-color: #667eea;
 }
 
-
 .size-section {
     margin-top: 1rem;
 }
 
 .product-Size {
     margin-top: 1rem;
+}
+.product-Size label{
+    margin-right: 1rem;
 }
 
 .product-Size h3 {
