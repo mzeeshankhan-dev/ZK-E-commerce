@@ -105,12 +105,6 @@ applyFiltersBtn.addEventListener('click', () => {
     const selectedRatingElement = document.querySelector('input[name="rating"]:checked');
     const selectedRating = selectedRatingElement ? selectedRatingElement.value : 'None';
 
-    // Output for testing (Aap yahan apni API call lagasakte hain)
-    console.log("--- Applied Filters ---");
-    console.log("Max Price:", `$${maxPrice}`);
-    console.log("Colors:", selectedColors);
-    console.log("Min Rating:", selectedRating);
-
     alert(`Filters Applied!\nPrice: $${maxPrice}\nColors: ${selectedColors.join(', ') || 'None'}\nRating: ${selectedRating} Stars & Up`);
 });
 

@@ -1,8 +1,7 @@
 
-// ============================================================
-//  product.js  —  Product detail page: render + Add to Cart
-// ============================================================
+///////  Product detail page: render + Add to Cart  ////////
 
+// Get the products array
 import { productsItems } from "../data/products-Item.js";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -10,16 +9,17 @@ document.addEventListener("DOMContentLoaded", () => {
     updateNavCount();
 });
 
-// ── cart helpers ──────────────────────────────────────────────
-
+//  Function for geting data from localStorage
 function getCart() {
     return JSON.parse(localStorage.getItem("cart")) || [];
 }
 
+// Function for saving data in localStorage
 function saveCart(cart) {
     localStorage.setItem("cart", JSON.stringify(cart));
 }
 
+// Function for updating cart products quantity
 export function updateNavCount() {
     const cart = getCart();
     const total = cart.reduce((s, i) => s + i.quantity, 0);
@@ -27,8 +27,7 @@ export function updateNavCount() {
     if (badge) badge.textContent = total;
 }
 
-// ── add to cart ───────────────────────────────────────────────
-
+// Function for product add in cart
 function addToCart(productId, quantity, color, size) {
     // Validation
     if (!color) {
@@ -61,7 +60,7 @@ function addToCart(productId, quantity, color, size) {
     return true;
 }
 
-// ── toast notification ────────────────────────────────────────
+///////  toast notification 
 
 function showToast(message, type = "success") {
     // Remove existing toast
@@ -104,7 +103,7 @@ function showToast(message, type = "success") {
     }, 2800);
 }
 
-// ── build product detail page ─────────────────────────────────
+//////////    build product detail page
 
 function addProductToDetailPage() {
     const productId = new URLSearchParams(window.location.search).get("id");
@@ -116,19 +115,19 @@ function addProductToDetailPage() {
         return;
     }
 
-    // --- gallery images ---
+    ////   gallery images
     let images = "";
     productData.images.forEach(image => {
         images += `<img src="${image}" alt="${productData.name}">`;
     });
 
-    // --- star rating ---
+    /////   star rating
     let rating = "";
     productData.rating.forEach(pRate => {
         rating += `<i class="${pRate}"></i>`;
     });
 
-    // --- color radio buttons ---
+    /////   color radio buttons
     let productColor = "";
     productData.color.forEach(pColor => {
         productColor += `
@@ -136,7 +135,7 @@ function addProductToDetailPage() {
             <label for="color-${pColor}" class="color">${pColor}</label>`;
     });
 
-    // --- size radio buttons ---
+    /////   size radio buttons
     let productSize = "";
     productData.size.forEach(pSize => {
         productSize += `
@@ -144,7 +143,7 @@ function addProductToDetailPage() {
             <label for="size-${pSize}" class="size">${pSize}</label>`;
     });
 
-    // --- main HTML ---
+    //////    main HTML
     const productDetailHTML = `
     <div class="product-detail-container">
         <div class="product-images-ctr">
@@ -219,7 +218,7 @@ function addProductToDetailPage() {
 
     document.getElementById("product-detail-section").innerHTML = productDetailHTML;
 
-    // ── Lower image section ──
+    //////   Lower image section
     const pLowerImages = productData.images.slice(1, 5);
     let lowerImage = "";
     pLowerImages.forEach(image => {
@@ -232,7 +231,7 @@ function addProductToDetailPage() {
         </div>
         <div class="p-other-images">${lowerImage}</div>`;
 
-    // ── Thumbnail click → main image swap ──
+    ///////   Thumbnail click → main image swap
     const pMainImage = document.querySelector("#p-main-img img");
     document.querySelectorAll("#p-other-img img").forEach(img => {
         img.addEventListener("click", () => {
@@ -240,7 +239,7 @@ function addProductToDetailPage() {
         });
     });
 
-    // ── Quantity counter ──
+    //////   Quantity counter
     let selectedQuantity = 1;
     const quantityEl = document.getElementById("quantity");
     const plusBtn = document.getElementById("plus");
@@ -258,14 +257,14 @@ function addProductToDetailPage() {
         }
     });
 
-    // ── Add to Cart button ──
+    //////   Add to Cart button
     document.getElementById("product-Add-Btn").addEventListener("click", () => {
         const selectedColor = document.querySelector('input[name="color"]:checked')?.value || "";
         const selectedSize = document.querySelector('input[name="size"]:checked')?.value || "";
         addToCart(productData.id, selectedQuantity, selectedColor, selectedSize);
     });
 
-    // ── Buy Now button ──
+    ///////  Buy Now button
     document.getElementById("buy-now-btn").addEventListener("click", () => {
         const selectedColor = document.querySelector('input[name="color"]:checked')?.value || "";
         const selectedSize = document.querySelector('input[name="size"]:checked')?.value || "";

@@ -1,7 +1,5 @@
 
-// ============================================================
-//  cart.js  —  Cart page: render from localStorage + interactions
-// ============================================================
+///////  Cart page: render from localStorage + interactions
 
 import { productsItems } from "../data/products-Item.js";
 
@@ -10,16 +8,17 @@ document.addEventListener("DOMContentLoaded", () => {
     updateNavCount();
 });
 
-// ── helpers ──────────────────────────────────────────────────
-
+// Fonction for geting data from localStorage
 function getCart() {
     return JSON.parse(localStorage.getItem("cart")) || [];
 }
 
+// Function for saving data in localStorage 
 function saveCart(cart) {
     localStorage.setItem("cart", JSON.stringify(cart));
 }
 
+// function for update product quantity
 export function updateNavCount() {
     const cart = getCart();
     const total = cart.reduce((s, i) => s + i.quantity, 0);
@@ -31,7 +30,7 @@ function getProductData(id) {
     return productsItems.find(p => p.id === id) || null;
 }
 
-// ── render whole cart ─────────────────────────────────────────
+// render whole cart
 
 function renderCart() {
     const cart = getCart();
@@ -97,8 +96,7 @@ function renderCart() {
     refreshSummary();
 }
 
-// ── quantity controls ─────────────────────────────────────────
-
+// quantity controls
 window.cartIncreaseQty = function (btn) {
     const row = btn.closest("tr");
     changeQuantity(row, 1);
@@ -138,7 +136,7 @@ function changeQuantity(row, delta) {
     updateNavCount();
 }
 
-// ── remove item ───────────────────────────────────────────────
+// remove item
 
 window.cartRemoveItem = function (btn) {
     const row = btn.closest("tr");
@@ -162,7 +160,7 @@ window.cartRemoveItem = function (btn) {
     }, 250);
 };
 
-// ── clear all ─────────────────────────────────────────────────
+// clear all
 
 window.clearCart = function () {
     if (!confirm("Remove all items from your cart?")) return;
@@ -171,7 +169,7 @@ window.clearCart = function () {
     updateNavCount();
 };
 
-// ── summary recalculation ─────────────────────────────────────
+// summary recalculation
 
 function refreshSummary() {
     const cart = getCart();
@@ -198,13 +196,3 @@ function updateSummaryUI(subtotal, itemCount) {
     if (totalEl) totalEl.textContent = "$" + subtotal.toLocaleString();
     if (labelEl) labelEl.textContent = `Subtotal (${itemCount} item${itemCount !== 1 ? "s" : ""})`;
 }
-
-// ── promo toggle ──────────────────────────────────────────────
-
-window.togglePromo = function (header) {
-    const body = header.nextElementSibling;
-    const chevron = header.querySelector(".promo-chevron");
-    const isOpen = body.style.display === "flex";
-    body.style.display = isOpen ? "none" : "flex";
-    chevron.textContent = isOpen ? "∨" : "∧";
-};

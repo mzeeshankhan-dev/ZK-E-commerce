@@ -3,37 +3,41 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart</title>
+
+    <!-- ===== link cart.css  =======  -->
+    <link rel="stylesheet" href="./style/cart.css">
     <!-- ===== link style.css ===== -->
     <link rel="stylesheet" href="./style/style.css">
     <!-- ===== link responsive css ===== -->
     <link rel="stylesheet" href="./style/responsive.css">
     <!-- ===== Remic Icon CDN -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
-    <!-- ===== link cart.css  =======  -->
-    <link rel="stylesheet" href="./style/cart.css">
+    
 </head>
 
 <body>
 
-    <!-- //////  Header Section   ////// -->
+    <!--======== Top Header Section  =========-->
 
     <header>
         <div class="navbar">
 
-            <!-- header logo -->
             <div class="logo">
-                <!-- menu button -->
+                <!-- Menu Button -->
                 <div class="menu-btn">
                     <i id="menu-btn" class="ri-menu-line"></i>
                 </div>
-                <!-- sidebar ctr -->
+                <!-- ===== SideBar Container  -->
                 <div class="sidebar" id="sidebar">
                     <!-- sidebar header -->
                     <div class="sidebar-header">
+                        <!-- Logo -->
                         <div class="sidebar-logo">
                             <img src="./assets/images/web-logo.png" alt="logo img">
                         </div>
+                        <!-- Close Icon -->
                         <div class="close-icon">
                             <i id="close-btn" class="ri-close-large-fill"></i>
                         </div>
@@ -51,17 +55,18 @@
                             <li><span>⚽</span><a href="#">Sports and outdoor</a></li>
                         </ul>
                     </div>
-                    <!-- filter -->
+                    <!-- Sidebar Filter Section -->
                     <div class="filter">
-
                         <div class="sidebar-filter">
                             <div class="filter-header">
                                 <h2><i class="ri-filter-2-fill"></i>Filter</h2>
+                                <!-- Button for clearing filter -->
                                 <button id="clear-all" class="clear-btn">Clear All</button>
                             </div>
 
                             <hr class="divider">
 
+                            <!-- Filter in Price -->
                             <div class="filter-section">
                                 <h4>Price Range</h4>
                                 <div class="price-slider-container">
@@ -75,6 +80,7 @@
 
                             <hr class="divider">
 
+                            <!-- Filter in Color -->
                             <div class="filter-section">
                                 <h4>Colors</h4>
                                 <div class="color-options">
@@ -103,6 +109,7 @@
 
                             <hr class="divider">
 
+                            <!-- Filter in Rating -->
                             <div class="filter-section">
                                 <h4>Rating</h4>
                                 <div class="rating-options">
@@ -157,19 +164,19 @@
                                 </div>
                             </div>
 
+                            <!-- Button to apply filter -->
                             <button id="apply-filters" class="apply-btn">Apply Filters</button>
                         </div>
-
-
                     </div>
-
                 </div>
-                <!-- logo -->
+
+                <!-- ====== Top Header Logo -->
                 <div class="logo-ctr">
                     <a href="index.html">
                         <img src="./assets/images/web-logo.png" alt="logo">
                     </a>
                 </div>
+
             </div>
 
             <!-- delivery-location ctr -->
@@ -188,7 +195,7 @@
             </div>
 
             <div class="nav-right">
-
+                <!-- Login ctr -->
                 <div class="login-ctr">
                     <div class="div">
                         <div class="screen-login">
@@ -202,7 +209,7 @@
                         </div>
 
                     </div>
-                    <!-- login dropdown  -->
+                    <!-- Login Dropdown  -->
                     <div class="login-notification-card">
                         <div class="card-header">
                             <button class="btn login">Sign In</button>
@@ -226,6 +233,7 @@
                     <div><strong>& Orders</strong></div>
                 </div>
 
+                <!-- Cart Icon and Quantuty -->
                 <a href="./cart.html">
                     <div class="cart-btn div" id="cart-btn">
                         <span class="cart-count" id="cart-count">0</span>
@@ -236,6 +244,7 @@
             </div>
         </div>
 
+        <!-- Category Navbar -->
         <div class="sub-nav">
             <a href="#">Choice</a>
             <a href="#">New</a>
@@ -259,18 +268,18 @@
                         <li>Writing Supplies</li>
                     </ul>
                 </div>
-
             </div>
         </div>
     </header>
 
-    <!-- //////////  Main section  //////// -->
+    <!--=========  Main section =========-->
 
     <!-- TOP BAR -->
     <div class="topbar">
         <div>
             <div class="topbar-title">Shopping Cart</div>
         </div>
+
         <a href="index.html" class="continue-shopping">
             <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path d="M15 18l-6-6 6-6" />
@@ -279,10 +288,11 @@
         </a>
     </div>
 
-    <!-- MAIN -->
+    <!--======== Main Section ======== -->
+    
     <div class="cart-page">
 
-        <!-- LEFT: cart table (filled by JS) -->
+        <!-- Left Side: Cart Table -->
         <div class="cart-left">
             <table class="cart-table">
                 <thead>
@@ -291,12 +301,13 @@
                         <th class="col-price">Price</th>
                         <th class="col-qty">Quantity</th>
                         <th class="col-total">Total</th>
-                        <th></th>
                     </tr>
                 </thead>
+
                 <tbody>
                     <!-- rows injected by cart.js -->
                 </tbody>
+
             </table>
 
             <div class="cart-footer">
@@ -312,7 +323,7 @@
             </div>
         </div>
 
-        <!-- RIGHT: order summary -->
+        <!-- Right Side: Order Summary -->
         <div class="cart-right">
             <div class="order-summary">
                 <div class="summary-heading">Order Summary</div>
