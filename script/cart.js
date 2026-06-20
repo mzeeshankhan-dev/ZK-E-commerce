@@ -196,3 +196,24 @@ function updateSummaryUI(subtotal, itemCount) {
     if (totalEl) totalEl.textContent = "$" + subtotal.toLocaleString();
     if (labelEl) labelEl.textContent = `Subtotal (${itemCount} item${itemCount !== 1 ? "s" : ""})`;
 }
+
+/////////  Sidebar Toggle  ////////
+
+const menuBtn = document.getElementById("menu-btn");
+const closeBtn = document.getElementById("close-btn");
+const sidebar = document.getElementById("sidebar");
+
+menuBtn.addEventListener("click", () => {
+    sidebar.classList.add("active");
+});
+closeBtn.addEventListener("click", () => {
+    sidebar.classList.remove("active");
+});
+document.addEventListener("click", (e) => {
+    if (
+        !sidebar.contains(e.target) &&
+        !menuBtn.contains(e.target)
+    ) {
+        sidebar.classList.remove("active");
+    }
+})

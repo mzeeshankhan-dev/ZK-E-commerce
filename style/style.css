@@ -326,9 +326,9 @@
  .sidebar {
      width: 30rem;
      height: 100vh;
-     position: absolute;
+     position: fixed;
      top: 0;
-     left: -100%;
+     left: -200%;
      background-color: #fff;
      color: black;
      overflow-y: auto;
